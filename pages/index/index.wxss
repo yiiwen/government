@@ -1,0 +1,28 @@
+.slide-img{
+	width: 100% !important;
+}
+
+.case-item{
+	width:200rpx;
+	text-align: center;
+	float: left;
+	height: 38px;
+	font-size: 0.8rem;
+	line-height: 38px;
+}
+
+.case-item-activity{
+	color: green;
+	border-bottom: 2px solid green;
+}
+
+.case-list{
+	margin-top: 10rpx;
+}
+
+.case {
+	height:150px;
+	overflow:hidden;
+	padding:0rpx 10rpx;
+	margin-top:0rpx;
+}
