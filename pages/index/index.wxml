@@ -1,13 +1,13 @@
-<swiper indicator-dots="{{indicatorDots}}"
+<swiper class='banner' indicator-dots="{{indicatorDots}}" style='height:{{factImageHeight}}px'
 	autoplay="true" interval="{{interval}}" duration="{{duration}}" display-multiple-items="1" indicator-dots="true">
 	<block wx:for="{{imgUrls}}">
 		<swiper-item>
-			<image src="{{item}}" class='slide-img' mode="aspectFill" />
+			<image src="{{item}}" model="widthFix" style='width:100%;height:{{factImageHeight}}px' bindload='imageLoad' />
 		</swiper-item>
 	</block>
 </swiper>
 
-<movable-area style="width: 100%;height:40px;margin-top:0.2rem;">
+<movable-area animation="true" inertia="true" style="width: 100%;height:40px;margin-top:0.2rem;overflow:hidden;">
 	<movable-view class='cases' style='width: 1000rpx;height:40px;overflow:hidden;'  direction="all" x="{{x}}">
 		<view wx:for="{{cases}}" class='case-item {{activity == index ? "case-item-activity" : ""}}'
 		 bindtap='switchCase' data-index="{{index}}">
@@ -16,20 +16,92 @@
 	</movable-view>
 </movable-area>
 
-<view class="case-list">
-	<view class='case'>
-		<image src='/images/timg.jpg' mode='widthFix' style='width:100%;'></image>
-	</view>
+<swiper class='cases-slide' style='height:{{caseSlideHeight}}px;top:{{factImageHeight + 44}}px'
+ indicator-dots="{{indicatorDots}}" bindchange="casesSlideChange" interval="{{interval}}" 
+ duration="300" current="{{currentCase}}">
+    <swiper-item>
+		<scroll-view scroll-y style="height:{{caseSlideHeight - 50}}px;">
+			<view class="case-list">
+				<view class='case' wx:for="{{[1,2,3,4,5,6,7]}}" bindtap='caseDetail'>
+					<view class='case-block-left'>
+						<image src='/images/20170829173100317.jpg' style='width:110px;'  mode='widthFix'></image>
+					</view>
+					<view class='case-block-right'>
+						<text class='case-title'>股票交易软件</text>
+						<text class='case-intro'>大家创库UNIDEA BANK是由张晓明先生与陈粤先生合伙经营， 是一家以“策略为先导、视觉表达为手段、产品落地为目的”的品牌设计公司。 擅长挖掘品牌的“隐形价值 品“本身价值”； 以国际视野，推动本土品牌升级，提倡做合适的设计。</text>
+						<text class='on-line-time'>上线日期:2017-08-09</text>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+    </swiper-item>
 
-	<view class="case">
-		<image src='/images/timg.jpg' mode='aspectFit' style='width:100%;'></image>
-	</view>
+	<swiper-item>
+		<scroll-view scroll-y style="height:{{caseSlideHeight - 50}}px;">
+			<view class="case-list">
+				<view class='case' wx:for="{{[1,2,3,4,5,6,7]}}" bindtap='caseDetail'>
+					<view class='case-block-left'>
+						<image src='/images/20170829173100317.jpg' style='width:110px;'  mode='widthFix'></image>
+					</view>
+					<view class='case-block-right'>
+						<text class='case-title'>股票交易软件</text>
+						<text class='case-intro'>大家创库UNIDEA BANK是由张晓明先生与陈粤先生合伙经营， 是一家以“策略为先导、视觉表达为手段、产品落地为目的”的品牌设计公司。 擅长挖掘品牌的“隐形价值 品“本身价值”； 以国际视野，推动本土品牌升级，提倡做合适的设计。</text>
+						<text class='on-line-time'>上线日期:2017-08-09</text>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+    </swiper-item>
 
-	<view class="case">
-		<image src='/images/timg.jpg' mode='aspectFit' style='width:100%;'></image>
-	</view>
+	<swiper-item>
+		<scroll-view scroll-y style="height:{{caseSlideHeight - 50}}px;">
+			<view class="case-list">
+				<view class='case' wx:for="{{[1,2,3,4,5,6,7]}}" bindtap='caseDetail'>
+					<view class='case-block-left'>
+						<image src='/images/20170829173100317.jpg' style='width:110px;'  mode='widthFix'></image>
+					</view>
+					<view class='case-block-right'>
+						<text class='case-title'>股票交易软件</text>
+						<text class='case-intro'>大家创库UNIDEA BANK是由张晓明先生与陈粤先生合伙经营， 是一家以“策略为先导、视觉表达为手段、产品落地为目的”的品牌设计公司。 擅长挖掘品牌的“隐形价值 品“本身价值”； 以国际视野，推动本土品牌升级，提倡做合适的设计。</text>
+						<text class='on-line-time'>上线日期:2017-08-09</text>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+    </swiper-item>
 
-	<view class="case">
-		<image src='/images/timg.jpg' mode='aspectFit' style='width:100%;'></image>
-	</view>
-</view>
+	<swiper-item>
+		<scroll-view scroll-y style="height:{{caseSlideHeight - 50}}px;">
+			<view class="case-list">
+				<view class='case' wx:for="{{[1,2,3,4,5,6,7]}}" bindtap='caseDetail'>
+					<view class='case-block-left'>
+						<image src='/images/20170829173100317.jpg' style='width:110px;'  mode='widthFix'></image>
+					</view>
+					<view class='case-block-right'>
+						<text class='case-title'>股票交易软件</text>
+						<text class='case-intro'>大家创库UNIDEA BANK是由张晓明先生与陈粤先生合伙经营， 是一家以“策略为先导、视觉表达为手段、产品落地为目的”的品牌设计公司。 擅长挖掘品牌的“隐形价值 品“本身价值”； 以国际视野，推动本土品牌升级，提倡做合适的设计。</text>
+						<text class='on-line-time'>上线日期:2017-08-09</text>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+    </swiper-item>
+
+	<swiper-item>
+		<scroll-view scroll-y style="height:{{caseSlideHeight - 50}}px;">
+			<view class="case-list">
+				<view class='case' wx:for="{{[1,2,3,4,5,6,7]}}" bindtap='caseDetail'>
+					<view class='case-block-left'>
+						<image src='/images/20170829173100317.jpg' style='width:110px;'  mode='widthFix'></image>
+					</view>
+					<view class='case-block-right'>
+						<text class='case-title'>股票交易软件</text>
+						<text class='case-intro'>大家创库UNIDEA BANK是由张晓明先生与陈粤先生合伙经营， 是一家以“策略为先导、视觉表达为手段、产品落地为目的”的品牌设计公司。 擅长挖掘品牌的“隐形价值 品“本身价值”； 以国际视野，推动本土品牌升级，提倡做合适的设计。</text>
+						<text class='on-line-time'>上线日期:2017-08-09</text>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+    </swiper-item>
+</swiper>
+
