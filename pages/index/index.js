@@ -18,6 +18,7 @@ Page({
 		width: 100,
 		caseSlideHeight:'400px',
 		currentCase:0,
+		animation:{}
     },
 
 	casesSlideChange:function(event){
@@ -74,6 +75,24 @@ Page({
 			content: '精彩内容，敬请期待',
 		})
 	},
+
+	touchMove:function(e){
+		var animation = wx.createAnimation({
+			duration: 300,
+			timingFunction: 'ease',
+		})
+		this.animation = animation;
+		animation.translateY(-this.data.factImageHeight).step();
+		this.setData({
+			caseSlideHeight:wx.getSystemInfoSync().windowHeight
+		});
+		setTimeout(function () {
+			this.setData({
+				animationData: animation.export()
+			})
+		}.bind(this), 50)
+	},
+
     /**
      * 生命周期函数--监听页面加载
      */
@@ -92,7 +111,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-		console.log(this.data.factImageHeight);
+		
     },
 
     /**

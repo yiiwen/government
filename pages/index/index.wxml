@@ -1,20 +1,22 @@
-<swiper class='banner' indicator-dots="{{indicatorDots}}" style='height:{{factImageHeight}}px'
-	autoplay="true" interval="{{interval}}" duration="{{duration}}" display-multiple-items="1" indicator-dots="true">
-	<block wx:for="{{imgUrls}}">
-		<swiper-item>
-			<image src="{{item}}" model="widthFix" style='width:100%;height:{{factImageHeight}}px' bindload='imageLoad' />
-		</swiper-item>
-	</block>
-</swiper>
+<view bindtouchmove="touchMove" animation="{{animationData}}">
+	<swiper class='banner' indicator-dots="{{indicatorDots}}" style='height:{{factImageHeight}}px'
+		autoplay="true" interval="{{interval}}" duration="{{duration}}" display-multiple-items="1" indicator-dots="true">
+		<block wx:for="{{imgUrls}}">
+			<swiper-item>
+				<image src="{{item}}" model="widthFix" style='width:100%;height:{{factImageHeight}}px' bindload='imageLoad' />
+			</swiper-item>
+		</block>
+	</swiper>
 
-<movable-area animation="true" inertia="true" style="width: 100%;height:40px;margin-top:0.2rem;overflow:hidden;">
-	<movable-view class='cases' style='width: 1000rpx;height:40px;overflow:hidden;'  direction="all" x="{{x}}">
-		<view wx:for="{{cases}}" class='case-item {{activity == index ? "case-item-activity" : ""}}'
-		 bindtap='switchCase' data-index="{{index}}">
-			{{item}}
-		</view>
-	</movable-view>
-</movable-area>
+	<movable-area animation="true" inertia="true" style="width: 100%;height:40px;margin-top:0.2rem;overflow:hidden;">
+		<movable-view class='cases' style='width: 1000rpx;height:40px;overflow:hidden;'  direction="all" x="{{x}}">
+			<view wx:for="{{cases}}" class='case-item {{activity == index ? "case-item-activity" : ""}}'
+			bindtap='switchCase' data-index="{{index}}">
+				{{item}}
+			</view>
+		</movable-view>
+	</movable-area>
+
 
 <swiper class='cases-slide' style='height:{{caseSlideHeight}}px;top:{{factImageHeight + 44}}px'
  indicator-dots="{{indicatorDots}}" bindchange="casesSlideChange" interval="{{interval}}" 
@@ -105,3 +107,4 @@
     </swiper-item>
 </swiper>
 
+</view>
