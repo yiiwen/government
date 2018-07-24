@@ -1,4 +1,4 @@
-<view bindtouchmove="touchMove" animation="{{animationData}}">
+<view bindtouchmove="touchMove" bindtouchstart='touchStart' animation="{{animationData}}">
 	<swiper class='banner' indicator-dots="{{indicatorDots}}" style='height:{{factImageHeight}}px'
 		autoplay="true" interval="{{interval}}" duration="{{duration}}" display-multiple-items="1" indicator-dots="true">
 		<block wx:for="{{imgUrls}}">

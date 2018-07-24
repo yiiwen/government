@@ -18,7 +18,8 @@ Page({
 		width: 100,
 		caseSlideHeight:'400px',
 		currentCase:0,
-		animation:{}
+		animation:{},
+		pageY:0,  //记录点击开始的屏幕Y坐标
     },
 
 	casesSlideChange:function(event){
@@ -77,20 +78,24 @@ Page({
 	},
 
 	touchMove:function(e){
-		var animation = wx.createAnimation({
-			duration: 300,
-			timingFunction: 'ease',
-		})
-		this.animation = animation;
-		animation.translateY(-this.data.factImageHeight).step();
-		this.setData({
-			caseSlideHeight:wx.getSystemInfoSync().windowHeight
-		});
-		setTimeout(function () {
+		if (e.touches[0].pageY - this.data.pageY < -10) {
+			var animation = wx.createAnimation({
+				duration: 300,
+				timingFunction: 'ease',
+			})
+			this.animation = animation;
+			animation.translateY(-this.data.factImageHeight).step();
+			this.setData({
+				caseSlideHeight: wx.getSystemInfoSync().windowHeight
+			});
 			this.setData({
 				animationData: animation.export()
 			})
-		}.bind(this), 50)
+		}
+	},
+
+	touchStart:function(e){
+		this.data.pageY = e.touches[0].pageY; 
 	},
 
     /**
@@ -139,7 +144,7 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function() {
-
+		
     },
 
     /**

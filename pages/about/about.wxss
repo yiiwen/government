@@ -1,0 +1,65 @@
+/* pages/about.wxss */
+.about-content{
+	padding: 6px 10px;
+}
+
+.content-title{
+	font-size:16pt;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+.content-text{
+	font-size:11pt;
+	line-height: 25px;
+}
+
+.line{
+	
+	width: 96%;
+	margin:0 auto;
+	margin-bottom: 15px;
+	border-top: 1px solid #888888;
+}
+
+.company-item{
+	width: 98%;
+	margin: 0 auto;
+}
+
+.company-item-left ,.company-item-right{
+	width: 49%;
+}
+
+.company-item-left{
+	float: left;
+}
+
+.company-item-right {
+	float: right;
+}
+
+.company-item-left image ,.company-item-right image{
+	width: 100%;
+}
+
+.compnay-item-text{
+	width: 100%;
+	padding: 4px;
+}
+
+.item-title {
+	font-size: 16pt;
+	margin-top: 5px;
+	margin-bottom: 8px;
+}
+
+.item-text{
+	font-size: 10pt;
+	line-height: 20px;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
