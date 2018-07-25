@@ -1,41 +1,42 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/about/about"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "油麦菜科技",
-        "navigationBarTextStyle": "black"
-    },
-    "tabBar": {
-        "color": "#333333",
-        "list": [
-            {
-                "pagePath": "pages/index/index",
-                "selectedIconPath": "images/gindex.png",
-                "iconPath": "images/index.png",
-                "text": "首页"
-            },
-            {
-                "pagePath": "pages/index/index",
-                "iconPath": "images/news.png",
-                "selectedIconPath": "images/gnews.png",
-                "text": "资讯"
-            },
-            {
-                "pagePath": "pages/index/index",
-                "iconPath": "images/subscript.png",
-                "selectedIconPath": "images/gsubscript.png",
-                "text": "预约"
-            },
-            {
-                "pagePath": "pages/about/about",
-                "iconPath": "images/aboutme.png",
-                "selectedIconPath": "images/gaboutme.png",
-                "text": "关于我们"
-            }
-        ]
-    }
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/news/news"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "油麦菜科技",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "images/gindex.png",
+        "iconPath": "images/index.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "iconPath": "images/news.png",
+        "selectedIconPath": "images/gnews.png",
+        "text": "资讯"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/subscript.png",
+        "selectedIconPath": "images/gsubscript.png",
+        "text": "预约"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "images/aboutme.png",
+        "selectedIconPath": "images/gaboutme.png",
+        "text": "关于我们"
+      }
+    ]
+  }
 }

@@ -1,0 +1,81 @@
+<!--pages/news/news.wxml-->
+<view class='page-title'>新闻资讯</view>
+<view class='container'>
+    
+    <view class='search-btn'>
+        <button size="default" plain="true"> 筛选条件(0) </button>
+    </view>
+
+    <view class="big_box" wx:for="{{bigbox}}">
+      <view class="left_box">
+          <view style="font-size:30rpx;color:rgb(128, 127, 127);margin:15rpx 0 10rpx 0;">{{item.time}}</view>
+          <view style="font-size:40rpx;">{{item.text}}</view>
+      </view>
+        <image src="/images/default_horizontal_blue.jpg"></image>    
+    </view>
+
+
+
+
+
+    <!-- <view class='news-item'>
+      <view class='news-item-left'>
+        <view class='news-title'>新闻 | 2018年07月06日</view>
+        <view class='news-content'>华为与Strategy Analytics联合</view>
+      </view>
+      <view class='news-item-image'>
+        <image src='/images/default_horizontal_blue.jpg' mode='widthFix'></image>
+      </view>
+    </view> -->
+
+    <!-- <view class='news-item'>
+      <view class='news-item-left'>
+        <view class='news-title'>新闻 | 2018年07月06日</view>
+        <view class='news-content'>华为与Strategy Analytics联合</view>
+      </view>
+      <view class='news-item-image'>
+        <image src='/images/default_horizontal_blue.jpg' mode='widthFix'></image>
+      </view>
+    </view>
+
+    <view class='news-item'>
+      <view class='news-item-left'>
+        <view class='news-title'>新闻 | 2018年07月06日</view>
+        <view class='news-content'>华为与Strategy Analytics联合</view>
+      </view>
+      <view class='news-item-image'>
+        <image src='/images/default_horizontal_blue.jpg' mode='widthFix'></image>
+      </view>
+    </view>
+
+    <view class='news-item'>
+      <view class='news-item-left'>
+        <view class='news-title'>新闻 | 2018年07月06日</view>
+        <view class='news-content'>华为与Strategy Analytics联合</view>
+      </view>
+      <view class='news-item-image'>
+        <image src='/images/default_horizontal_blue.jpg' mode='widthFix'></image>
+      </view>
+    </view>
+
+    <view class='news-item'>
+      <view class='news-item-left'>
+        <view class='news-title'>新闻 | 2018年07月06日</view>
+        <view class='news-content'>华为与Strategy Analytics联合</view>
+      </view>
+      <view class='news-item-image'>
+        <image src='/images/default_horizontal_blue.jpg' mode='widthFix'></image>
+      </view>
+    </view>
+
+    <view class='news-item'>
+      <view class='news-item-left'>
+        <view class='news-title'>新闻 | 2018年07月06日</view>
+        <view class='news-content'>华为与Strategy Analytics联合</view>
+      </view>
+      <view class='news-item-image'>
+        <image src='/images/default_horizontal_blue.jpg' mode='widthFix'></image>
+      </view>
+    </view> -->
+</view>
+
